@@ -26,6 +26,10 @@ ZhuaTech P2P 是知华科技（上海如静知华信息科技有限公司）的�
 
 系统中的供应商、金额和业务记录均为虚构演示数据。
 
+### 三单匹配预审
+
+新增 `POST /api/admin/three-way-match`，比对采购订单、收货和发票金额，并检查数量差异、价格差异、重复发票与税务有效性，返回差异率、`AUTO_APPROVE / REVIEW / BLOCK` 结论和原因，帮助应付团队提前分流异常单据。
+
 ### 技术与运行
 
 后端使用 Java 21、Spring Boot、Security、JWT、JPA、Flyway；前端使用 Vue 3、Pinia、Vue Router、Axios、Vite；数据库使用 MySQL 8，并提供 H2 集成测试与 Docker Compose。
