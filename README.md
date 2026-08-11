@@ -57,3 +57,7 @@ npm run dev:demo
 [架构说明](docs/architecture.md) · [接口说明](docs/api.md) · [数据库设计](docs/database.md) · [参与贡献](CONTRIBUTING.md)
 
 SEO：P2P 采购系统、采购管理系统源码、请购管理、供应商寻源、三单匹配、Java 采购系统、Vue 采购平台、知华科技。
+
+## 供应商发票异常
+
+新增 `POST /api/p2p/insights/invoice-exception`，检查重复发票、银行账户变更、税票、金额偏差、收货和供应商风险，输出 `AUTO_APPROVE`、`REVIEW` 或 `BLOCK_PAYMENT`。

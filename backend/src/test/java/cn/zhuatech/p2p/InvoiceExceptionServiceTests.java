@@ -1,0 +1,3 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+package cn.zhuatech.p2p;import cn.zhuatech.p2p.service.InvoiceExceptionService;import org.junit.jupiter.api.Test;import java.math.*;import static org.junit.jupiter.api.Assertions.*;
+class InvoiceExceptionServiceTests{private final InvoiceExceptionService s=new InvoiceExceptionService();@Test void blocksDuplicateInvoice(){var r=s.evaluate(new InvoiceExceptionService.Request(b("100"),b("100"),true,false,true,true,10));assertEquals("BLOCK_PAYMENT",r.status());}@Test void approvesCleanInvoice(){var r=s.evaluate(new InvoiceExceptionService.Request(b("100"),b("100"),false,false,true,true,10));assertEquals("AUTO_APPROVE",r.status());}private BigDecimal b(String v){return new BigDecimal(v);}}
