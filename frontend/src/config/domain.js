@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'P2P',systemName:'企业采购管理平台',englishName:'PROCURE TO PAY',theme:{primary:'#176b5b',dark:'#173d38',accent:'#d18a2e'},workspace:'供应链中心 / 采购运营',fieldWorkspace:'华东采购组',period:'2026-08-01 · 周六',liveText:'ERP 与供应商门户连接正常',fieldContextLabel:'当前采购组织',fieldContext:'华东区 · 间接采购',fieldUser:'苏言',fieldRole:'采购专员',adminUser:'孟舟',adminRole:'采购运营经理',
  adminTitle:'采购运营控制塔',adminBreadcrumb:'采购管理 / 今日运营',adminSubtitle:'集中查看请购、寻源、订单、收货、发票和付款匹配状态。',exportAction:'导出采购日报',createAction:'创建寻源任务',chartTitle:'采购处理周期',chartSubtitle:'本月累计按时完成率 / 管控目标',chartLabels:['第1周','第2周','第3周','第4周','第5周','第6周','第7周','第8周','本周'],loadTitle:'品类采购负荷',loadSubtitle:'进行中任务占团队可处理能力',recordsTitle:'进行中采购事项',recordsSubtitle:'按交付风险、金额和承诺日期排序',issueTitle:'采购与付款风险',issueSubtitle:'需要采购运营协调处理的异常事项',

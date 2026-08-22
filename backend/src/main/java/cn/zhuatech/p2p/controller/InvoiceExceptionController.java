@@ -1,3 +1,3 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.p2p.controller;import cn.zhuatech.p2p.common.ApiResponse;import cn.zhuatech.p2p.service.InvoiceExceptionService;import jakarta.validation.Valid;import org.springframework.web.bind.annotation.*;
 @RestController @RequestMapping("/api/p2p/insights/invoice-exception") public class InvoiceExceptionController{private final InvoiceExceptionService service;public InvoiceExceptionController(InvoiceExceptionService service){this.service=service;}@PostMapping ApiResponse<InvoiceExceptionService.Result> evaluate(@Valid @RequestBody InvoiceExceptionService.Request r){return ApiResponse.ok(service.evaluate(r));}}

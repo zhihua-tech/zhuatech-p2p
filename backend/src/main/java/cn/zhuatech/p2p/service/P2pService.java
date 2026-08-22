@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.p2p.service;
 import cn.zhuatech.p2p.common.BusinessException; import cn.zhuatech.p2p.dto.P2pDto.*; import cn.zhuatech.p2p.model.*; import cn.zhuatech.p2p.repository.*; import org.springframework.stereotype.Service; import org.springframework.transaction.annotation.Transactional; import java.util.*;
 @Service @Transactional(readOnly=true) public class P2pService {
