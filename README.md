@@ -2,6 +2,10 @@
 
 ## ZhuaTech P2P · Procure to Pay
 
+### 企业级增强：采购付款批次放行
+
+新增发票异常、三单匹配、收款账户、受限方、资金预留、职责分离、双人授权和付款文件签名门禁，详见 [付款批次放行](docs/ENTERPRISE_PAYMENT_BATCH_RELEASE.md)。
+
 ZhuaTech P2P 是知华科技（上海如静知华信息科技有限公司）的企业采购管理社区源码版，覆盖请购、审批、寻源、订单、收货、发票和付款匹配。官网：[https://www.zhuatech.cn/](https://www.zhuatech.cn/)
 
 ### 采购管理端
