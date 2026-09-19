@@ -10,8 +10,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ThreeWayMatchService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public MatchResult evaluate(MatchRequest request) {
         BigDecimal baseline = request.receiptAmount().signum() == 0
             ? request.purchaseOrderAmount() : request.receiptAmount();
@@ -31,11 +37,17 @@ public class ThreeWayMatchService {
         return new MatchResult(amountVarianceRate, decision, reasons);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record MatchRequest(@NotNull @DecimalMin("0.00") BigDecimal purchaseOrderAmount,
         @NotNull @DecimalMin("0.00") BigDecimal receiptAmount,
         @NotNull @DecimalMin("0.00") BigDecimal invoiceAmount,
         @NotNull @DecimalMin("0.00") @DecimalMax("100.00") BigDecimal quantityVarianceRate,
         @NotNull @DecimalMin("0.00") @DecimalMax("100.00") BigDecimal priceVarianceRate,
         @NotNull Boolean duplicateInvoice, @NotNull Boolean taxValid) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record MatchResult(double amountVarianceRate, String decision, List<String> reasons) {}
 }

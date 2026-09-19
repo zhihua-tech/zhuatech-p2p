@@ -4,9 +4,15 @@ package cn.zhuatech.p2p.service;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class PaymentBatchReleaseGovernanceServiceTest {
     private final PaymentBatchReleaseGovernanceService service = new PaymentBatchReleaseGovernanceService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void releasesControlledPaymentBatch() {
         var result = service.assess(new PaymentBatchReleaseGovernanceService.Request(
                 "PAY-001", 18, 0, true, true, true, true, true, true, true));
@@ -14,6 +20,9 @@ class PaymentBatchReleaseGovernanceServiceTest {
         assertThat(result.blockers()).isEmpty();
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void blocksUncontrolledPaymentBatch() {
         var result = service.assess(new PaymentBatchReleaseGovernanceService.Request(
                 "PAY-002", 8, 2, false, false, false, false, false, false, false));

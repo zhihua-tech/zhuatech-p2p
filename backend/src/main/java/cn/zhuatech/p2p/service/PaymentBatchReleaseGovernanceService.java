@@ -8,8 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class PaymentBatchReleaseGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -28,12 +34,21 @@ public class PaymentBatchReleaseGovernanceService {
                 List.copyOf(blockers), List.copyOf(actions));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String batchNo, @Min(1) int paymentCount,
                           @Min(0) int invoiceExceptionCount, boolean threeWayMatchComplete,
                           boolean vendorBankVerified, boolean sanctionsCleared,
                           boolean liquidityReserved, boolean requesterApproverSeparated,
                           boolean dualApprovalComplete, boolean paymentFileSigned) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(String batchNo, int paymentCount, Decision decision,
                              List<String> blockers, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { RELEASE, APPROVAL_REQUIRED, BLOCK }
 }
