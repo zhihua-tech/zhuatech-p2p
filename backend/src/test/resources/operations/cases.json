@@ -1,0 +1,65 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "netAcceptedQty": "#80",
+      "invoiceLineAmount": "#800"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "invoicedQty": "81"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "overInvoicedQty": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "invoicePrice": "10.01"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "invoicePrice": "10.02"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "returnedQty": "91"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "receivedQty": "101"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "invoicePrice": "9.99"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "unitPriceDifference": "#-0.01"
+    },
+    "error": false
+  }
+]

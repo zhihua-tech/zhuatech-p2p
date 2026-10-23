@@ -1,0 +1,106 @@
+{
+  "slug": "p2p",
+  "title": "扣退货后的订单行三单匹配",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "orderedQty",
+      "label": "订单数量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "receivedQty",
+      "label": "累计验收数量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "returnedQty",
+      "label": "验收后退货数量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "invoicedQty",
+      "label": "净开票数量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "orderPrice",
+      "label": "订单单价元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "invoicePrice",
+      "label": "发票单价元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "priceTolerance",
+      "label": "允许单价差元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "netAcceptedQty",
+      "label": "净验收数量"
+    },
+    {
+      "key": "overInvoicedQty",
+      "label": "超净验收开票量"
+    },
+    {
+      "key": "unitPriceDifference",
+      "label": "单价差元"
+    },
+    {
+      "key": "invoiceLineAmount",
+      "label": "发票行金额元"
+    }
+  ],
+  "description": "对订单、验收入库、验收后退货及净开票数量/单价进行逐行匹配；退货后可结算数量减少，超量或超价明确阻断。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "orderedQty": "100",
+        "receivedQty": "90",
+        "returnedQty": "10",
+        "invoicedQty": "80",
+        "orderPrice": "10",
+        "invoicePrice": "10",
+        "priceTolerance": "0.01"
+      }
+    ]
+  }
+}
